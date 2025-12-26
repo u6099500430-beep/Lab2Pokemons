@@ -1,0 +1,45 @@
+@startuml
+title UML-диаграмма лабораторной работы №2
+
+package "pokemons" {
+    class Phione
+    class Anorith
+    class Armaldo
+    class Igglybuff
+    class Jigglypuff
+    class Wigglytuff
+
+    Phione --|> Pokemon
+    Anorith --|> Pokemon
+    Armaldo --|> Anorith
+    Igglybuff --|> Pokemon
+    Jigglypuff --|> Igglybuff
+    Wigglytuff --|> Jigglypuff
+}
+
+package "moves" {
+    class DazzlingGleam
+    class Blizzard
+    class AncientPower
+    class DreamEater
+    class RockBlast
+    class StoneEdge
+    class BodySlam
+    class Confide
+    class DoubleTeam
+    class Sing
+    class ThunderWave
+
+    DazzlingGleam --> SpecialMove
+    Blizzard --> SpecialMove
+    AncientPower --> SpecialMove
+    DreamEater --> SpecialMove
+    RockBlast --> PhysicalMove
+    StoneEdge --> PhysicalMove
+    BodySlam --> PhysicalMove
+    Confide --> StatusMove
+    DoubleTeam --> StatusMove
+    Sing --> StatusMove
+    ThunderWave --> StatusMove
+}
+@enduml
